@@ -10,8 +10,8 @@ int main() {
 
 
     // in default behaviour cout is flushed before cin.
-    //cin.tie(NULL);
-    //cout.tie(NULL); // Untie cout from cin. since these two streams are tied together.
+    cin.tie(NULL);
+    cout.tie(NULL); // Untie cout from cin. since these two streams are tied together.
 
 
     cout << "Enter your name: "; // This may not be flushed immediately
