@@ -31,7 +31,13 @@ int main(){
 
     cout <<std::endl;
 
-    cout<<"arr.at(0)"; // similar to arr[0]. but it does some bound checking as well.
+    cout<<arr.at(0) <<endl; // similar to arr[0]. but it does some bound checking i.e 
+    // there is error message if things go above the range as well.
+
+    cout<<"Front is: " <<arr.front()<<endl; //for accessing the front element
+    cout<<"Back is :"  <<arr.back()<<endl;  // for accessing the back element
+
+    return 0;
 
 
 }
