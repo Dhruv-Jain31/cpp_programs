@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 
-using namespace as std;
+using namespace std;
 
 int main(){
 
-    ios_base::sync_with_studio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
@@ -20,6 +20,8 @@ int main(){
     }
 
     arr.pop_back(); // removes the last element of vector
+
+    cout<<std::endl;
 
     for(int x: arr){  // for each loop. every value of arr comes into x.
         cout<<x<<" ";
