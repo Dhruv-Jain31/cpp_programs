@@ -36,6 +36,10 @@ vector<string> fizzbuzz(int n){
 
 int main(){
 
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
     vector<string> output = fizzbuzz(30);
     for(string x : output){
         cout<< x <<",";
