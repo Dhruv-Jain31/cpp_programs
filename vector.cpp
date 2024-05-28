@@ -8,7 +8,16 @@ int main(){
     cin.tie(NULL);
     cout.tie(NULL);
 
-    vector<int> arr; // in brackets there is data type of vector.
+    vector<int> arr = {1,2,3,4,5}; // in brackets there is data type of vector.
+
+    //fill constructor
+    vector<int> student_marks(10,0); //vector student marks is created with 10 elements each has value = 0.
+
+    //size of vector
+    cout<<"size of arr is: "<< arr.size() <<endl;
+
+    // capacity of vector i.e how much elements it can hold
+    cout<<"capacity of vector is: "<< arr.capacity() <<endl;
 
     arr.push_back(10); // to push elements in vector
     arr.push_back(20);
@@ -19,9 +28,14 @@ int main(){
 
     }
 
-    arr.pop_back(); // removes the last element of vector
-
     cout<<std::endl;
+
+    cout<<"size of arr is after inserting new elements is: "<< arr.size() <<endl;
+
+    // to insert new elements a new copy of original vector is formed with double size.
+    cout<<"capacity of vector after inserting new elemets is: "<< arr.capacity() <<endl;
+
+    arr.pop_back(); // removes the last element of vector
 
     for(int x: arr){  // for each loop. every value of arr comes into x.
         cout<<x<<" ";
