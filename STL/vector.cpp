@@ -33,7 +33,28 @@ int main() {
     // push back method O(1), linear if re-allocation happens
     fifth.push_back(20); // similary there is pop back
 
-    
+    cout << "Size of fifth after push back: " << fifth.size() << endl;
+    cout << "Capacity of fifth after push back: " << fifth.capacity() << endl;
+
+    // clear all the elements in the current vector, reduces size to 0
+    // capacity of vector will not change
+    // fifth.clear();
+
+    // erase the 4th element
+    fifth.erase(fifth.begin() + 3);
+
+    for (int x : fifth){
+        cout << x << ",";
+    }
+    cout << endl;
+
+    // erase the range - first 3 elements
+    fifth.erase(fifth.begin(), fifth.begin() + 3);
+
+    for (int x : fifth){
+        cout << x << ",";
+    }
+    cout << endl;
 
     return 0;
 }
