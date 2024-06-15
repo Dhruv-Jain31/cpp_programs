@@ -47,6 +47,9 @@ int main(){
     }
     cout<< endl;
 
+    cout << arr.front() << endl;
+    cout << arr.back() << endl;
+
     return 0;
 
 }
