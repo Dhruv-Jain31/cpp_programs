@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -32,6 +33,10 @@ int main(){
     int n = sizeof(arr)/sizeof(int);
 
     updateArray(arr,1,13); // actual array is updated
+
+    //sort
+    sort(arr + 0, arr + n); // here .begin and .end function don't work
+    // we need to pass starting and ending addresses here.
 
     printArray(arr,n);
 
