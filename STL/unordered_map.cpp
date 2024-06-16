@@ -41,4 +41,9 @@ int main(){
     cout<<endl;
 
     return 0;
+
+    // if we use map instead of unordered map all O(N) operation
+    // will become O(logn) operation. since map use bst internally.
+    //map will give a sorted order in which things are sorted
+    // lexicographically
 }

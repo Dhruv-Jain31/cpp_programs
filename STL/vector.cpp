@@ -13,7 +13,7 @@ int main() {
 
     // Range constructor: vector from array
     int numbers[] = {10, 20, 30, 40};
-    vector<int> third(numbers, numbers + 4);
+    vector<int> third(numbers+ 0, numbers + 4);
 
     // copy constructor = creates a copy of one vector inside another
     vector<int> fourth(third);
@@ -39,6 +39,9 @@ int main() {
     // clear all the elements in the current vector, reduces size to 0
     // capacity of vector will not change
     // fifth.clear();
+
+    //sort
+    sort(fifth.begin(),fifth.end());
 
     // erase the 4th element
     fifth.erase(fifth.begin() + 3);

@@ -2,11 +2,10 @@
 #include <algorithm>
 
 using namespace std;
-
 //array to functions
 //array is passed by reference
 void updateArray(int *arr,int i, int val){
-    // arr[i] = *(arr + i) = *(arr + i*size of (type))
+    // arr[i] = *(arr + i) = *(arr + i*size of (type)) type = int, string etc.
     // int *arr = int arr[] = it stores the base address of array
     arr[i] = val;
 }
