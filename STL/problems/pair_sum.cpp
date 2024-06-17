@@ -17,7 +17,7 @@ void pairSum(vector<int> arr, int Sum){
     for(int i=0; i<arr.size(); i++){
         int x = Sum - arr[i];
         if(s.find(x) != s.end()){  // we only look for elements that we have encountered earlier
-            cout<<x <<"-" <<arr[i] <<endl;
+            cout<<x <<"," <<arr[i] <<endl;
         }
         //insert the current no inside set
         s.insert(arr[i]);
@@ -26,8 +26,8 @@ void pairSum(vector<int> arr, int Sum){
 
 int main(){
 
-    vector<int> arr{10, 5, 2, 3, -6, 9, 11};
-    int S = 4;
+    vector<int> arr{10, 5, 2, 3, -6, 9, 11, 2};
+    int S = 5;
 
     pairSum(arr,S);
 
