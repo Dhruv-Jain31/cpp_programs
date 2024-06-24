@@ -4,6 +4,7 @@ using namespace std;
 
 // Templates : they are used to write generic functions. i.e functions
 // can work with any data type whether it is int,float,char etc
+// run time remains the same it does not change
 
 template<typename T>
 int search(T arr[], int n, T x){
