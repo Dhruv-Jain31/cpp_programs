@@ -35,4 +35,9 @@ int main(){
     cout << "Frequency of key is " << (ub - lb) << endl;
 
     return 0;
+
+// for unsorted array we can use:
+// 1. Sort + Binary Search (NlogN)
+//2. Map (but insertion takes NlogN time)
+//3. Unordered map (O(N)), this is used for unsorted array
 }
