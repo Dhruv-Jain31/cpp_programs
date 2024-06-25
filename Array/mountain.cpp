@@ -30,7 +30,7 @@ int highest_mountain(vector<int> arr) {
             int j = i;
 
             // Count backwards
-            while (j >= 1 && arr[j] > arr[j - 1]) {
+            while (j >= 1 && arr[j] > arr[j - 1]) { // if j becomes zero it gives us a segmentation fault
                 j--;
                 cnt++;
             }
