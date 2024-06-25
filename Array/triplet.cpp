@@ -16,7 +16,7 @@ vector<vector<int>> triplets(vector<int> arr,int target_sum){
     sort(arr.begin(),arr.end());
 
     //pick every a[i], solving pair sum for remaining part using two pointer
-    for(int i=0; i<=n-3; i++){
+    for(int i=0; i<=n-3; i++){ // we take n-3 because we have to find triplet
 
         int j = i+1;
         int k = n-1;
@@ -59,7 +59,13 @@ int main(){
     else{
         cout << "triplet are: "<< endl;
         for(auto p: triplet){
-            cout << p[0] << "," << p[1] << "," << p[2] << endl;
+            /*for(auto no : p){
+                cout << no << ", ";
+            }
+            cout << endl; */
+
+            // When we have a vector of vectors, you access each element of the inner vectors using indices
+            cout << p[0] << ", " << p[1] << ", " << p[2] << endl;
         }
     }
 
