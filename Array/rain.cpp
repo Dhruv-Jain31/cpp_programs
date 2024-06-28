@@ -1,49 +1,38 @@
+/*Given n non-negative integers representing an elevation map where the width of each bar is 1,
+compute how much water it can trap after raining.
+
+Example 1:
+
+see rainwatertrap.png for clarity
+
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1].
+In this case, 6 units of rain water (blue section) are being trapped..*/
+
 #include <iostream>
 #include <vector>
-#include <unordered_set>
 
 using namespace std;
 
-int longest_band(vector<int> arr) {
-    int n = arr.size();
-    unordered_set<int> s(arr.begin(), arr.end());
-    vector<int> longest_band;
-    int largest_len = 0;
+int trapped_water(vector<int> heights){
 
-    for (int element : arr) {
-        // Check if the current element is the start of a new band
-        if (s.find(element - 1) == s.end()) {
-            int current = element;
-            vector<int> current_band;
-
-            // Collect all elements of the current band
-            while (s.find(current) != s.end()) {
-                current_band.push_back(current);
-                current++;
-            }
-
-            // Update the longest band if the current one is longer
-            if (current_band.size() > longest_band.size()) {
-                longest_band = current_band;
-            }
-
-            // Update the largest length
-            largest_len = max(largest_len, static_cast<int>(current_band.size()));
-        }
+    // if there are two bars, then no water can be trapped
+    int n = height.size();
+    if(n <= 2){
+        return 0;
     }
 
-    // Print the longest band
-    for (int num : longest_band) {
-        cout << num << " ";
-    }
-    cout << endl;
-
-    return largest_len;
+    // Left MAX, Right MAX
 }
 
-int main() {
-    vector<int> arr{1, 9, 3, 0, 18, 5, 2, 4, 10, 7, 12, 6, 8};
-    cout << "Longest Band Length: " << longest_band(arr) << endl;
 
-    return 0;
+
+
+
+int main(){
+    vector<int> water = {0,1,0,2,1,0,1,3,2,1,2,1};
+    cout << trapped_water(water) << endl;
 }
+
+
