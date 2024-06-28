@@ -1,42 +1,55 @@
 /*Given an array containing N integers, find length of longest band.
 A band is a subsequence which can be reordered in such a manner that all elements appear
-consecutive (i.e with absolute difference of 1 neighbouring elements.) 
+consecutive (i.e with absolute difference of 1 neighbouring elements.)
 Longest band is the band (subsequence) which contains maximum integers*/
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+
 using namespace std;
 
-// Returns length of the longest
-// contiguous subsequence
-int findLongestConseqSubseq(int arr[], int n)
-{
-    int ans = 0, count = 0;
+int longest_band(vector<int>arr){
+    int n = arr.size();
+    unordered_set<int> s;
+    int largest_len = 1;
 
-    // sort the array
-    sort(arr, arr + n);
-
-    vector<int> v;
-    v.push_back(arr[0]);
-
-    // insert repeated elements only once in the vector
-    for (int i = 1; i < n; i++) {
-        if (arr[i] != arr[i - 1])
-            v.push_back(arr[i]);
+    // data inside set
+    for(int x: arr){
+        s.insert(x);
     }
-    // find the maximum length
-    // by traversing the array
-    for (int i = 0; i < v.size(); i++) {
 
-        // Check if the current element is equal
-        // to previous element +1
-        if (i > 0 && v[i] == v[i - 1] + 1)
-            count++;
-        // reset the count
-        else
-            count = 1;
+    //iterate over vector
 
-        // update the maximum
-        ans = max(ans, count);
+    for(auto element : s){
+        int parent = element - 1;
+
+        if(s.find(parent) != s.end()){
+            // we start the chain from that band
+            int next_no = element + 1;
+            int cnt = 1;
+
+            while(s.find(next_no) != s.end()){
+                next_no++;
+                cnt++;
+            }
+
+            if (cnt > largest_len){
+                largest_len = cnt;
+            }
+        }
     }
-    return ans;
+
+    return largest_len;
+
+}
+
+
+
+int main(){
+
+    vector<int> arr{1, 9, 3, 0, 18, 5, 2, 4, 10, 7, 12, 6};
+    cout << longest_band(arr);
+
+    return 0;
 }
