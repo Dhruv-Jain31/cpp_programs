@@ -13,7 +13,7 @@ int longest_band(vector<int>arr){
     int n = arr.size();
     unordered_set<int> s;
     vector<int> longest_band;
-    int largest_len = 1;
+    int largest_len = 0;
 
     // data inside set
     for(int x: arr){
@@ -27,7 +27,7 @@ int longest_band(vector<int>arr){
 
         if(s.find(parent) != s.end()){
             // we start the chain from that band
-            int next_no = element + 1;
+            int next_no = element;
             int cnt = 1;
             vector<int> current_band;
             current_band.push_back(parent);
