@@ -15,7 +15,7 @@ bool out_of_order(vector<int> arr, int i){
     if(i == arr.size() - 1){
         return x < arr[i-1];
     }
-    return x > arr[i] || x < arr[i];
+    return x > arr[i + 1] || x < arr[i - 1];
 }
 
 
