@@ -24,12 +24,13 @@ int max_Subarray_Sum(vector<int> arr){
         }
     }
 
-    return max_sum;
+    return max(max_sum,sum); // depend whether it considers the negative sum as largest or zero.
+    // in this case it is largest is zero so max is used else it would not been used
 
 }
 
 int main(){
-    vector <int> arr = {-1,2,3,4,-2,6,8,-2,3};
+    vector <int> arr = {-1,2,3,4,-2,6,-8,2,3};
     cout << max_Subarray_Sum(arr) << endl;
 
     return 0;
