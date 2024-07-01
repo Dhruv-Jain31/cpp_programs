@@ -62,7 +62,7 @@ int longest_band(vector<int>arr){
 
 int main(){
 
-    vector<int> arr{1, 9, 3, 0, 18, 5, 2, 4, 10, 7, 12, 6, 8};
+    vector<int> arr{1, 9, 3, 0, 18, 5, 2, 4, 10, 7, 12, 6};
     cout << longest_band(arr);
 
     return 0;
