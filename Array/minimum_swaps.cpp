@@ -46,7 +46,7 @@ int min_swaps(vector<int> arr){
         int cycle = 0;
 
         while(visited_index[index] == false){
-            visited_index[index] == true;
+            visited_index[index] = true;
             int next_index = ap[index].second;
             index = next_index;
             cycle +=1;
