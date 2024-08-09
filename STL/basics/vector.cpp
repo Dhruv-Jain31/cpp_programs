@@ -24,7 +24,7 @@ int main() {
     // getting the current size of vector
     cout << "Size of fifth: " << fifth.size() << endl;
 
-    // getting the underlying capacity 
+    // getting the underlying capacity
     cout << "Capacity of fifth: " << fifth.capacity() << endl;
 
     // to get the max size
