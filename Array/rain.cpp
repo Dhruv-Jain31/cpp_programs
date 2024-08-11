@@ -30,7 +30,10 @@ int trapped_water(vector<int> height){
 
     for(int i = 1; i<n; i++){
         left[i] = max(left[i-1],height[i]); // iterating from left to right and storing the max element
-        right[n-i-1] = max(right[n-i],height[n-i-1]); // iterating from right to left and storing the max
+    }
+
+    for(int i = n-2; i>0; i--){
+        right[i] = max(height[i],right[i+1]); // iterating from right to left and storing the max
     }
 
     //water level

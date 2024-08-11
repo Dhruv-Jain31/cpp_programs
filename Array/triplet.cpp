@@ -12,7 +12,7 @@ using namespace std;
 vector<vector<int>> triplets(vector<int> arr,int target_sum){
     // logic
     int n = arr.size();
-    vector<vector<int>> result;
+    vector<vector<int>> result; //vector of vector
     sort(arr.begin(),arr.end());
 
     //pick every a[i], solving pair sum for remaining part using two pointer

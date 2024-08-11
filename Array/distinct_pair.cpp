@@ -11,7 +11,7 @@ using namespace std;
 vector<pair<int,int>> pairSum(vector<int> arr,int target_sum){ // return type is a vector int
     // logic
     unordered_set<int> s;
-    //vector<pair<int,int>> result;
+    //vector<int> result;
 
     set<pair<int,int>> result_set;
 
@@ -44,7 +44,7 @@ vector<pair<int,int>> pairSum(vector<int> arr,int target_sum){ // return type is
 
 int main(){
 
-    vector<int> arr{10, 5, 2, 3, -6, 9, 11, 4, 0};
+    vector<int> arr{10, 5, 2, 3, -6, 9, 11, 4, 0, -1};
     cout<< "Enter target Sum: ";
     int sum;
     cin >> sum;

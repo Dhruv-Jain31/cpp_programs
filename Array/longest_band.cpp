@@ -11,12 +11,12 @@ using namespace std;
 
 int longest_band(vector<int>arr){
     int n = arr.size();
-    unordered_set<int> s;
+    unordered_set<int> s; 
     vector<int> longest_band;
     int largest_len = 0;
 
     // data inside set
-    for(int x: arr){
+    for(auto x: arr){
         s.insert(x);
     }
 
