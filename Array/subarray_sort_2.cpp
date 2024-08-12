@@ -51,12 +51,20 @@ pair<int,int> subarray_sort_2(vector<int> arr) {
         right--;
     }
 
+    cout<< "Subarray needed to be sorted is: ";
+
+    for(left; left<=right; left++){
+        cout << arr[left] << ",";
+    }
+
+    cout<< endl;
+
     return {left,right};
 }
 
 
 int main(){
-    vector <int> arr = {10,2,3,4,5,8,6,7,9,0};
+    vector <int> arr = {1,2,3,4,5,8,6,7,9,10};
     auto p = subarray_sort_2(arr);
     cout << p.first << " and " << p.second << endl;
 

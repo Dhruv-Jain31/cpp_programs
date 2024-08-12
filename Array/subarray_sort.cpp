@@ -31,6 +31,8 @@ vector <int> subarray_sort(vector<int> a){
         return {-1,-1};
     }
 
+    cout<< "subarray needed to be sorted is: ";
+
     for(i; i<=j; i++){
         cout<< b[i] << ",";
     }
