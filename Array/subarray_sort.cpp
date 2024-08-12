@@ -18,12 +18,12 @@ vector <int> subarray_sort(vector<int> a){
     int i = 0;
     int n = a.size();
     while (i<n && a[i] == b[i]){
-        i++;
+        i++; //  starting index of subarray
     }
 
     int j = a.size() - 1 ;
     while (j>=0 && a[j] == b[j]){
-        j--;
+        j--;  // ending index of subarray
     }
 
     // if it is already sorted
@@ -31,7 +31,13 @@ vector <int> subarray_sort(vector<int> a){
         return {-1,-1};
     }
 
-    return {i,j};
+    for(i; i<=j; i++){
+        cout<< b[i] << ",";
+    }
+
+    cout << endl;
+
+    return {i,j}; // returning only indices of sub array
 }
 
 int main(){

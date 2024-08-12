@@ -10,7 +10,7 @@ using namespace std;
 bool out_of_order(vector<int> arr, int i){
     int x = arr[i];
     if(i == 0){
-        return x > arr[1];
+        return x > arr[1]; // then it is out of order
     }
     if(i == arr.size() - 1){
         return x < arr[i-1];
@@ -56,7 +56,7 @@ pair<int,int> subarray_sort_2(vector<int> arr) {
 
 
 int main(){
-    vector <int> arr = {1,2,3,4,5,8,6,7,9,10,11};
+    vector <int> arr = {10,2,3,4,5,8,6,7,9,0};
     auto p = subarray_sort_2(arr);
     cout << p.first << " and " << p.second << endl;
 
