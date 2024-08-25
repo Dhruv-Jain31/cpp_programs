@@ -16,11 +16,11 @@ vector<int> productArray(vector<int> arr){
     vector<int> suffix(n,1);
 
     for(int i=1; i<n; i++){
-        prefix[i] = prefix[i-1]*arr[i-1];
+        prefix[i] = prefix[i-1]*arr[i-1]; //For each element i, prefix[i] is the product of all elements before it.
     }
 
     for(int i=n-2; i>=0; i--){
-        suffix[i] = suffix[i+1]*arr[i+1];
+        suffix[i] = suffix[i+1]*arr[i+1]; //For each element i, suffix[i] is the product of all elements after it.
     }
 
     for(int i=0; i<n; i++){
