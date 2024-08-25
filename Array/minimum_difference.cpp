@@ -1,6 +1,6 @@
 //Implement a function that takes in two non-empty arrays of integers,
 //finds the pair of numbers (one from each array) who absolute difference is closest to zero,
-//and returns a pair containing these two numbers, with the first number from array.
+//and returns a pair containing these two numbers, with the first number from array1 and second from array2.
 
 #include <iostream>
 #include <vector>
