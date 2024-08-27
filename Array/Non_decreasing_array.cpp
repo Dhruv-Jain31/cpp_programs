@@ -34,4 +34,5 @@ int main(){
     int arr[] = {-94,-89,-28,-15,438,69,70,75,83,87};
     int n= sizeof(arr)/sizeof(arr[0]);
     bool result = isPossible(arr,n);
+    cout<< (result ? "Yes" : "No");
 }
