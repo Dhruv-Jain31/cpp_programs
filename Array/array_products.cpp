@@ -11,6 +11,9 @@ using namespace std;
 
 vector<int> productArray(vector<int> arr){
     int n = arr.size();
+    if(n == 1){
+        return {0};
+    }
     vector<int> output(n,1);
     vector<int> prefix(n,1);
     vector<int> suffix(n,1);
