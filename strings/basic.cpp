@@ -21,7 +21,7 @@ int main(){
     string temp;
 
     while(n--){
-        getline(cin,temp);   // by default string terminates with a new line
+        getline(cin,temp,'.');   // by default string terminates with a new line
         sarr.push_back(temp);
     }
 
