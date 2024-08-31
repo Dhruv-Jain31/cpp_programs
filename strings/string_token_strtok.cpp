@@ -12,7 +12,7 @@ int main(){
     cin.getline(input,1000);
 
     //strtok = it starts at the starting of input and gives one word at a time
-    char *token = strtok(input," "); // input is first character of the string
+    char *token = strtok(input,","); // input is first character of the string and , is the delimiter
 
     while (token != NULL){
         cout << token << endl;

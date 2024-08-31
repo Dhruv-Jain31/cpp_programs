@@ -18,7 +18,7 @@ void replace_space(char *str){
 
     int index = strlen(str) + 2*spaces; // there are 3 char to be inserted instead of space,
     // 1 space is there as it is and two more spaces are created
-    str[index] = '\0';
+    str[index] = '\0'; // terminate our string with null
 
     for(int i = strlen(str) - 1; i>=0; i--){
         if(str[i] == ' '){
