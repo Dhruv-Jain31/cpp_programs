@@ -13,7 +13,7 @@ int main(){
     getline(cin,input);
 
     //creating a string stream object
-    stringstream ss(input);
+    stringstream ss(input);  //it processes the input string
 
     string token;
     vector<string> tokens;
