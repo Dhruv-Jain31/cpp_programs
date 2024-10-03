@@ -20,6 +20,7 @@ int main(){
         token = strtok(NULL," "); // internally maintains the state of the string we passed in last fn call
         // by making a static variable and through it tracks uptill where string was splitted
     }
+    return 0;
 }
 
 //passing NULL means that strtok should process that string only, which was passed earlier.
