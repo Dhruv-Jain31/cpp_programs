@@ -15,9 +15,9 @@ string unique_substring(string str){
     while(j < str.length()){
         char ch = str[j];
         // if it is present in hashmap & index >= start of the current window
-        if(m.count(ch) && m[ch] >= 1){
+        if(m.count(ch) && m[ch] >= i){
             i = m[ch] + 1;
-            window_len = j-1;
+            window_len = j-i;
         }
 
         m[ch] = j;
