@@ -32,6 +32,7 @@ int main() {
 
     // push back method O(1), linear if re-allocation happens
     fifth.push_back(20); // similary there is pop back
+    fifth.emplace_back(20); //similar to push_back but has faster speed
 
     cout << "Size of fifth after push back: " << fifth.size() << endl;
     cout << "Capacity of fifth after push back: " << fifth.capacity() << endl;
@@ -59,5 +60,20 @@ int main() {
     }
     cout << endl;
 
+    vector<pair<int,int>>sixth;
+    sixth.push_back({1,2});
+    sixth.emplace_back(3,4); // pushes 3 and 4 as pairs no need to pass them in {}
+
+    vector<pair<int,int>>::iterator it = sixth.begin();
+    // another way of printing the pair by deferencing
+    cout << (*it).first << " " << (*it).second << endl;
+    it++;
+    cout << it->first << " " << it->second << endl;
+
+    vector<int>seventh(2,100); //{100,100}
+    seventh.insert(seventh.begin(),300); //{300,100,100}
+    seventh.insert(seventh.begin() + 1, 2, 10); //{300,10,10,100,100}
+
     return 0;
+
 }

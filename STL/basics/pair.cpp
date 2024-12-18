@@ -12,6 +12,7 @@ int main(){
 
     pair<string,pair<int,int>>p3;
     pair<pair<string,int>,int>p4;
+    pair<int,int> arr[] = {{1,2},{2,5},{5,1}}; //array of pairs
 
     p3.first = "Dhruv";
     p3.second.first = 21;
@@ -23,4 +24,5 @@ int main(){
     cout << p2.first << " " << p2.second << endl;
     cout << p3.first <<" " << p3.second.first <<" "<< p3.second.second << endl;
     cout << p4.first.first << " " << p4.first.second <<" "<< p4.second << endl;
+    cout << arr[1].second;
 }
